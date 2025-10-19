@@ -1,9 +1,9 @@
 // HOME PAGE ENTRY: loads nav/footer inserts, then runs homepage scripts.
 // Uses ES modules — include with: <script type="module" src="/js/pages/index/index.js"></script>
 
-import "/js/pageInserts/nav.js";
-import "/js/pageInserts/footer.js";
-import "/js/components/boxBuilder.js"; // <-- add this line
+import "./js/pageInserts/nav.js";
+import "./js/pageInserts/footer.js";
+import "./js/components/boxBuilder.js"; // <-- add this line
 
 
 // Insert helper: fetch HTML, inject, then call the component's init
