@@ -3,7 +3,7 @@
 
 import "../../pageInserts/nav.js";
 import "../../pageInserts/footer.js";
-import "../../pageInserts/boxBuilder.js"; // <-- add this line
+import "../../components/boxBuilder.js"; // <-- add this line
 
 
 // Insert helper: fetch HTML, inject, then call the component's init
