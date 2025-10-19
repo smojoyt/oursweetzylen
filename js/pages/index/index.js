@@ -20,8 +20,8 @@ async function insertAndInit(targetId, url, initFn) {
 }
 
 // Mount inserts (call asap)
-insertAndInit("navInsert", "/pageInserts/nav.html", window.OSZ?.navInit);
-insertAndInit("footerInsert", "/pageInserts/footer.html", window.OSZ?.footerInit);
+insertAndInit("navInsert", "pageInserts/nav.html", window.OSZ?.navInit);
+insertAndInit("footerInsert", "pageInserts/footer.html", window.OSZ?.footerInit);
 
 // --------------------
 // HOMEPAGE ENHANCEMENTS
