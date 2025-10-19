@@ -1,0 +1,53 @@
+<!-- NAV INSERT (Our Sweet Zylen) -->
+<!-- Assumes Tailwind is already loaded on the page -->
+
+<!-- Announcement -->
+<div class="bg-zylen-rose/20 text-center py-2 px-4 text-sm text-zylen-chocolate">
+  Fresh bakes daily • Local pickup available in Bonanza, GA
+</div>
+
+<header class="sticky top-0 z-50 bg-zylen-cream/80 backdrop-blur-lg shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+        <a href="#" class="flex items-center gap-3 group">
+          <span class="text-xl font-heading text-zylen-chocolate font-semibold tracking-wide">Our Sweet Zylen</span>
+          <span class="h-6 w-px bg-zylen-chocolate/20"></span>
+          <span class="text-xs uppercase tracking-[0.2em] text-zylen-strawberry">EST. 2025</span>
+        </a>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="/" class="font-medium hover:text-zylen-strawberry transition-colors">Home</a>
+        <a href="/#menu" class="font-medium hover:text-zylen-strawberry transition-colors">Menu</a>
+        <a href="/#order" class="font-medium hover:text-zylen-strawberry transition-colors">Order</a>
+        <a href="/#about" class="font-medium hover:text-zylen-strawberry transition-colors">About</a>
+        <a href="/#contact" class="font-medium hover:text-zylen-strawberry transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="/cart.html" class="p-2 rounded-full hover:bg-zylen-rose/20 transition-colors" aria-label="Shopping Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-zylen-chocolate" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </a>
+
+        <!-- Mobile menu button -->
+        <button id="osz-menu-btn" class="md:hidden p-2 rounded-full hover:bg-zylen-rose/20 transition" aria-label="Open menu" aria-expanded="false" aria-controls="osz-mobile-nav">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-zylen-chocolate" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav id="osz-mobile-nav" class="md:hidden hidden pb-4">
+      <div class="grid gap-2">
+        <a href="/" class="py-2">Home</a>
+        <a href="/#menu" class="py-2">Menu</a>
+        <a href="/#order" class="py-2">Order</a>
+        <a href="/#about" class="py-2">About</a>
+        <a href="/#contact" class="py-2">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>

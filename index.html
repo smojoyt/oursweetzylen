@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Sweet Zylen | Pretty Dipped Sweets & Desserts</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            'zylen-chocolate': '#4B2E1E',
+            'zylen-strawberry': '#A64B3C',
+            'zylen-rose': '#B97A7A',
+            'zylen-cream': '#F5F0EA',
+            'zylen-taupe': '#6E5A4A',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    [x-cloak]{ display:none !important; }
+
+    /* Sprinkle background */
+    .sprinkles{
+      background-image:
+        radial-gradient(3px 3px at 20px 10px, rgba(75,46,30,.18) 99%, transparent 101%),
+        radial-gradient(2px 2px at 50px 35px, rgba(169,75,60,.18) 99%, transparent 101%),
+        radial-gradient(2px 2px at 80px 60px, rgba(185,122,122,.18) 99%, transparent 101%);
+      background-size: 90px 90px;
+      background-color: #F5F0EA; /* fallback */
+    }
+    @media (max-width: 640px){ .sprinkles{ background-size: 70px 70px; } }
+    @media (min-width: 1280px){ .sprinkles{ background-size: 110px 110px; } }
+
+    /* Simple reveal helper (optional) */
+    .animated-section.fade-up { opacity:0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+    .animated-section.fade-up.is-visible { opacity:1; transform: translateY(0); }
+  </style>
+</head>
+
+<body class="bg-zylen-cream text-zylen-taupe font-body antialiased">
+  <!-- NAV INSERT -->
+  <div id="navInsert"></div>
+
+  <main>
+    <!-- HERO -->
+    <section class="py-20 sm:py-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="text-center md:text-left">
+          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl text-zylen-chocolate leading-tight">
+            Hand-crafted cupcakes & 
+            <span class="bg-gradient-to-r from-zylen-strawberry to-zylen-rose bg-clip-text text-transparent">
+              chocolate-dipped strawberries
+            </span>
+          </h1>
+          <p class="mt-6 text-lg max-w-lg mx-auto md:mx-0">
+            Handcrafted with love and the finest ingredients. Perfect for any occasion, or just because.
+          </p>
+          <div class="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+            <a href="#menu" class="bg-zylen-chocolate hover:bg-zylen-strawberry text-white font-bold py-3 px-8 rounded-full transition-colors duration-300 shadow-lg">
+              Shop Strawberries
+            </a>
+            <a href="#menu" class="bg-white/80 border border-zylen-chocolate/30 hover:bg-white text-zylen-chocolate font-bold py-3 px-8 rounded-full transition-colors duration-300 shadow-lg">
+              Shop Cupcakes
+            </a>
+          </div>
+        </div>
+
+        <!-- Image with anchored badge -->
+        <div class="relative w-full rounded-2xl shadow-xl overflow-hidden">
+          <div class="aspect-[3/3]">
+            <img 
+              src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1964&auto=format&fit=crop" 
+              alt="A beautiful assortment of colorful desserts including cupcakes and dipped strawberries" 
+              class="h-full w-full object-cover"
+              loading="lazy">
+          </div>
+          <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 rounded-xl shadow border border-zylen-taupe/15">
+            <p class="text-sm">
+              <span class="font-semibold text-zylen-chocolate">Fresh Today:</span> Vanilla rosette • Milk chocolate drizzle
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR TREATS -->
+    <section id="menu" class="py-24 sprinkles">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-zylen-chocolate">Our Treats</h2>
+          <p class="mt-4 max-w-2xl mx-auto">Browse our featured collections. Each treat is made to order just for you.</p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12">
+          <!-- STRAWBERRIES -->
+          <div class="bg-white/80 rounded-2xl shadow-lg overflow-hidden border border-zylen-taupe/10 transform hover:-translate-y-2 transition-transform duration-300">
+            <img src="/images/default/strawberries/03.jpg" alt="Lush chocolate-dipped strawberries arranged beautifully" class="w-full h-64 object-cover" loading="lazy">
+            <div class="p-8">
+              <span class="inline-block bg-zylen-rose/80 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Fan Favorite</span>
+              <h3 class="mt-4 font-heading text-2xl font-bold text-zylen-chocolate">Chocolate-Dipped Strawberries</h3>
+              <p class="mt-2">Juicy, ripe strawberries hand-dipped in rich Belgian chocolate. The perfect elegant treat.</p>
+              <p class="mt-4 font-bold text-xl text-zylen-strawberry">From $24.99</p>
+              <div class="mt-6 flex items-center gap-4">
+                <a href="#" class="w-full text-center bg-zylen-chocolate hover:bg-zylen-strawberry text-white font-bold py-2 px-4 rounded-full transition-colors duration-300">Add to Cart</a>
+                <a href="#" class="w-full text-center bg-transparent border border-zylen-chocolate/50 hover:bg-zylen-chocolate/10 text-zylen-chocolate font-bold py-2 px-4 rounded-full transition-colors duration-300">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CUPCAKES -->
+          <div class="bg-white/80 rounded-2xl shadow-lg overflow-hidden border border-zylen-taupe/10 transform hover:-translate-y-2 transition-transform duration-300">
+            <img src="/images/default/cupcake/02.jpg" alt="A variety of beautifully frosted cupcakes on a platter" class="w-full h-64 object-cover" loading="lazy">
+            <div class="p-8">
+              <span class="inline-block bg-zylen-rose/80 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Fresh Today</span>
+              <h3 class="mt-4 font-heading text-2xl font-bold text-zylen-chocolate">Gourmet Cupcakes</h3>
+              <p class="mt-2">Fluffy, moist cupcakes with decadent frosting. Available in classic and seasonal flavors.</p>
+              <p class="mt-4 font-bold text-xl text-zylen-strawberry">From $19.99</p>
+              <div class="mt-6 flex items-center gap-4">
+                <a href="#" class="w-full text-center bg-zylen-chocolate hover:bg-zylen-strawberry text-white font-bold py-2 px-4 rounded-full transition-colors duration-300">Add to Cart</a>
+                <a href="#" class="w-full text-center bg-transparent border border-zylen-chocolate/50 hover:bg-zylen-chocolate/10 text-zylen-chocolate font-bold py-2 px-4 rounded-full transition-colors duration-300">View Details</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW ARRIVALS -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-zylen-chocolate">New Arrivals</h2>
+          <p class="mt-4 max-w-2xl mx-auto">Check out what's fresh out of the oven this week.</p>
+        </div>
+
+        <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center group">
+            <div class="relative overflow-hidden rounded-2xl shadow-lg">
+              <img src="/images/default/rasberries/01.jpg" alt="Placeholder for a new dessert item" class="w-full h-auto transform group-hover:scale-110 transition-transform duration-300" loading="lazy">
+              <a href="#" class="absolute inset-0 bg-zylen-chocolate/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-bold rounded-2xl">View Item</a>
+            </div>
+            <h3 class="mt-4 font-semibold text-lg text-zylen-chocolate">White Chocolate Raspberries</h3>
+            <p class="mt-1 text-zylen-strawberry font-bold">$29.99</p>
+          </div>
+
+          <div class="text-center group">
+            <div class="relative overflow-hidden rounded-2xl shadow-lg">
+              <img src="/images/default/cupcake/04.jpg" alt="Placeholder for a new dessert item" class="w-full h-auto transform group-hover:scale-110 transition-transform duration-300" loading="lazy">
+              <a href="#" class="absolute inset-0 bg-zylen-chocolate/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-bold rounded-2xl">View Item</a>
+            </div>
+            <h3 class="mt-4 font-semibold text-lg text-zylen-chocolate">Red Velvet Cupcakes</h3>
+            <p class="mt-1 text-zylen-strawberry font-bold">$22.99</p>
+          </div>
+
+          <div class="text-center group">
+            <div class="relative overflow-hidden rounded-2xl shadow-lg">
+              <img src="/images/default/caramelBites/01.jpg" alt="Placeholder for a new dessert item" class="w-full h-auto transform group-hover:scale-110 transition-transform duration-300" loading="lazy">
+              <a href="#" class="absolute inset-0 bg-zylen-chocolate/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-bold rounded-2xl">View Item</a>
+            </div>
+            <h3 class="mt-4 font-semibold text-lg text-zylen-chocolate">Caramel Drizzle Bites</h3>
+            <p class="mt-1 text-zylen-strawberry font-bold">$18.99</p>
+          </div>
+
+          <div class="text-center group">
+            <div class="relative overflow-hidden rounded-2xl shadow-lg">
+              <img src="/images/default/truffles/01.jpg" alt="Placeholder for a new dessert item" class="w-full h-auto transform group-hover:scale-110 transition-transform duration-300" loading="lazy">
+              <a href="#" class="absolute inset-0 bg-zylen-chocolate/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-bold rounded-2xl">View Item</a>
+            </div>
+            <h3 class="mt-4 font-semibold text-lg text-zylen-chocolate">Dark Chocolate Truffles</h3>
+            <p class="mt-1 text-zylen-strawberry font-bold">$25.99</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUILD A BOX (multiples supported) -->
+    <section id="build-a-box" class="py-24" x-data="boxBuilder()">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div x-intersect.once="$el.classList.add('is-visible')" class="animated-section fade-up text-center mb-16">
+          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-zylen-chocolate">Build Your Own Sweet Box</h2>
+          <p class="mt-4 max-w-2xl mx-auto">Select 6 of your favorite treats to create a personalized gift box. Perfect for any occasion!</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <!-- PICKER -->
+          <div x-intersect.once="$el.classList.add('is-visible')" class="animated-section fade-up lg:col-span-2">
+            <div class="flex items-center justify-between mb-6">
+              <h3 class="text-xl font-bold text-zylen-chocolate">Choose Your Treats</h3>
+              <div class="flex space-x-2 p-1 bg-zylen-rose/10 rounded-full">
+                <button type="button" @click="filter = 'all'"        :class="{'bg-zylen-chocolate text-white': filter === 'all'}"         class="px-4 py-1.5 text-sm font-semibold rounded-full transition-colors">All</button>
+                <button type="button" @click="filter = 'strawberry'" :class="{'bg-zylen-chocolate text-white': filter === 'strawberry'}"  class="px-4 py-1.5 text-sm font-semibold rounded-full transition-colors">Strawberries</button>
+                <button type="button" @click="filter = 'cupcake'"    :class="{'bg-zylen-chocolate text-white': filter === 'cupcake'}"     class="px-4 py-1.5 text-sm font-semibold rounded-full transition-colors">Cupcakes</button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+              <template x-for="item in filteredItems()" :key="item.id">
+                <div
+                  class="relative bg-white rounded-xl shadow-md p-4 text-center transition-all duration-200 hover:shadow-xl"
+                  :class="{ 'opacity-50': isFull() && !isInBox(item.id) }"
+                >
+                  <img :src="item.image" :alt="item.name" class="w-24 h-24 mx-auto mb-2 object-cover rounded-full">
+                  <h4 class="font-semibold text-sm text-zylen-chocolate" x-text="item.name"></h4>
+                  <p class="text-xs text-zylen-strawberry font-bold" x-text="`$${item.price.toFixed(2)}`"></p>
+
+                  <!-- Quantity badge -->
+                  <div x-show="getCount(item.id) > 0" x-cloak
+                       class="absolute top-2 right-2 bg-zylen-strawberry text-white h-6 min-w-[1.5rem] px-1 rounded-full flex items-center justify-center text-xs font-bold">
+                    <span x-text="getCount(item.id)"></span>
+                  </div>
+
+                  <!-- Controls -->
+                  <div class="mt-3 flex items-center justify-center gap-2">
+                    <button type="button"
+                            @click="decrement(item.id)"
+                            :disabled="getCount(item.id) === 0"
+                            class="w-8 h-8 rounded-full border border-zylen-chocolate/40 text-zylen-chocolate disabled:opacity-40"
+                            aria-label="Decrease quantity">–</button>
+
+                    <button type="button"
+                            @click="increment(item)"
+                            :disabled="isFull()"
+                            class="w-8 h-8 rounded-full bg-zylen-chocolate text-white disabled:bg-zylen-taupe/40"
+                            aria-label="Increase quantity">+</button>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+
+          <!-- PREVIEW / TOTALS -->
+          <div x-intersect.once="$el.classList.add('is-visible')" class="animated-section fade-up">
+            <div class="bg-white/80 rounded-2xl shadow-lg p-6 sticky top-28">
+              <div class="flex items-center justify-between">
+                <h3 class="text-xl font-bold text-zylen-chocolate">Your Custom Box</h3>
+                <button type="button" @click="clear()" class="text-xs underline hover:text-zylen-strawberry">Clear</button>
+              </div>
+              <p class="text-center text-sm mt-1" aria-live="polite">
+                <span x-text="box.length"></span> / <span x-text="maxSize"></span> items selected
+              </p>
+
+              <div class="grid grid-cols-3 gap-4 my-6">
+                <template x-for="i in maxSize">
+                  <div class="aspect-square rounded-lg flex items-center justify-center"
+                       :class="box[i-1] ? 'bg-transparent' : 'bg-zylen-cream border-2 border-dashed border-zylen-rose/50'">
+                    <template x-if="box[i-1]">
+                      <div class="relative w-full h-full group">
+                        <img :src="box[i-1].image" :alt="box[i-1].name" class="w-full h-full object-cover rounded-lg">
+                        <button type="button" @click="removeSlot(i-1)"
+                                class="absolute inset-0 bg-black/50 text-white flex items-center justify-center rounded-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                          </svg>
+                        </button>
+                      </div>
+                    </template>
+                    <span x-show="!box[i-1]" class="text-zylen-rose/50 text-xs">Slot <span x-text="i"></span></span>
+                  </div>
+                </template>
+              </div>
+
+              <div class="border-t border-zylen-rose/30 pt-4 space-y-2">
+                <div class="flex justify-between">
+                  <span>Subtotal:</span>
+                  <span class="font-semibold" x-text="`$${subtotal().toFixed(2)}`"></span>
+                </div>
+                <div class="flex justify-between text-xs">
+                  <span>Box Fee:</span>
+                  <span class="font-semibold" x-text="`$${boxFee.toFixed(2)}`"></span>
+                </div>
+              </div>
+
+              <div class="flex justify-between font-bold text-lg text-zylen-chocolate border-t border-zylen-rose/30 pt-2 mt-2">
+                <span>Total:</span>
+                <span x-text="`$${total().toFixed(2)}`"></span>
+              </div>
+
+              <button type="button"
+                      :disabled="box.length !== maxSize"
+                      @click="console.log(payload()); /* TODO: send to cart */"
+                      class="w-full mt-6 bg-zylen-chocolate text-white font-bold py-3 px-6 rounded-full transition-all duration-300 disabled:bg-zylen-taupe/50 disabled:cursor-not-allowed hover:bg-zylen-strawberry shadow-lg">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 bg-zylen-rose/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-zylen-chocolate">Crafted with Passion, Shared with Love</h2>
+          <p class="mt-4">Our Sweet Zylen started in a small kitchen with a big dream: to create beautiful, delicious desserts that bring joy to every celebration. We believe in using high-quality ingredients, timeless recipes, and a personal touch in everything we make.</p>
+          <p class="mt-4">From our family to yours, we hope you enjoy every sweet bite. Our commitment is to freshness, flavor, and the simple happiness that a perfect dessert can bring.</p>
+          <a href="#" class="inline-block mt-6 bg-zylen-chocolate hover:bg-zylen-strawberry text-white font-bold py-3 px-8 rounded-full transition-colors duration-300 shadow-lg no-underline">
+            Meet The Baker
+          </a>
+        </div>
+        <div class="relative h-96">
+          <img src="/images/default/cupcake/01.jpg" alt="Founder of Our Sweet Zylen smiling while decorating a cake" class="rounded-2xl shadow-xl w-full h-full object-cover absolute top-0 left-0" loading="lazy">
+          <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-zylen-rose/20 rounded-2xl -z-10 transform rotate-12"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="font-heading text-3xl sm:text-4xl font-bold text-zylen-chocolate">Sweet Words From Our Customers</h2>
+        </div>
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white/60 p-8 rounded-2xl shadow-lg border border-zylen-taupe/10 transform hover:scale-105 transition-transform duration-300">
+            <p>"The chocolate-dipped strawberries were the star of our party! Absolutely divine and so beautifully presented."</p>
+            <p class="mt-4 font-bold text-zylen-chocolate">- Sarah J.</p>
+          </div>
+          <div class="bg-white/60 p-8 rounded-2xl shadow-lg border border-zylen-taupe/10 transform hover:scale-105 transition-transform duration-300 md:scale-105 md:shadow-xl">
+            <p>"Best cupcakes in town, hands down. The red velvet is a must-try. You can taste the quality ingredients."</p>
+            <p class="mt-4 font-bold text-zylen-chocolate">- Michael B.</p>
+          </div>
+          <div class="bg-white/60 p-8 rounded-2xl shadow-lg border border-zylen-taupe/10 transform hover:scale-105 transition-transform duration-300">
+            <p>"Effortless ordering and the final product was even better than the pictures. Will be ordering again for sure!"</p>
+            <p class="mt-4 font-bold text-zylen-chocolate">- Emily R.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="py-24 bg-zylen-rose/10">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-heading text-3xl sm:text-4xl font-bold text-zylen-chocolate">Join The Sweet List</h2>
+        <p class="mt-4">Be the first to know about new flavors, special offers, and seasonal treats.</p>
+        <form action="#" method="POST" class="mt-8 flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+          <label for="email" class="sr-only">Email address</label>
+          <input type="email" name="email" id="email" required class="w-full px-5 py-3 rounded-full border border-zylen-taupe/30 focus:ring-2 focus:ring-zylen-strawberry focus:border-zylen-strawberry transition shadow-sm" placeholder="Enter your email address">
+          <button type="submit" class="bg-zylen-chocolate hover:bg-zylen-strawberry text-white font-bold py-3 px-8 rounded-full transition-colors duration-300 shadow-lg whitespace-nowrap">
+            Sign Up
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER INSERT -->
+  <div id="footerInsert"></div>
+
+  <!-- Alpine (core + intersect) BEFORE your module script -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- Inline boxBuilder so index works even if modules aren’t set up yet -->
+  <script>
+        function boxBuilder() {
+      return {
+        filter: 'all',
+        items: [
+          { id: 1, name: 'Milk Choc. Strawberry',  price: 4.50, image: 'https://placehold.co/100x100/A64B3C/F5F0EA?text=🍓', category: 'strawberry' },
+          { id: 2, name: 'Dark Choc. Strawberry',  price: 4.50, image: 'https://placehold.co/100x100/4B2E1E/F5F0EA?text=🍓', category: 'strawberry' },
+          { id: 3, name: 'White Choc. Strawberry', price: 4.50, image: 'https://placehold.co/100x100/B97A7A/F5F0EA?text=🍓', category: 'strawberry' },
+          { id: 4, name: 'Red Velvet Cupcake',     price: 4.00, image: 'https://placehold.co/100x100/A64B3C/F5F0EA?text=🧁', category: 'cupcake' },
+          { id: 5, name: 'Vanilla Bean Cupcake',   price: 3.75, image: 'https://placehold.co/100x100/6E5A4A/F5F0EA?text=🧁', category: 'cupcake' },
+          { id: 6, name: 'Double Choc. Cupcake',   price: 4.00, image: 'https://placehold.co/100x100/4B2E1E/F5F0EA?text=🧁', category: 'cupcake' },
+          { id: 7, name: 'Sprinkle Strawberry',    price: 4.75, image: 'https://placehold.co/100x100/A64B3C/F5F0EA?text=🍓', category: 'strawberry' },
+          { id: 8, name: 'Carrot Cake Cupcake',    price: 4.25, image: 'https://placehold.co/100x100/6E5A4A/F5F0EA?text=🧁', category: 'cupcake' },
+          { id: 9, name: 'Lemon Zest Cupcake',     price: 4.00, image: 'https://placehold.co/100x100/B97A7A/F5F0EA?text=🧁', category: 'cupcake' }
+        ],
+
+        // Allow duplicates
+        box: [],
+        maxSize: 6,
+        boxFee: 5.00,
+
+        filteredItems() {
+          return this.filter === 'all' ? this.items : this.items.filter(i => i.category === this.filter);
+        },
+        isFull() { return this.box.length >= this.maxSize; },
+        getCount(id) { return this.box.reduce((n, it) => n + (it.id === id ? 1 : 0), 0); },
+        isInBox(id) { return this.getCount(id) > 0; },
+
+        increment(item) { if (!this.isFull()) this.box.push(item); },
+        decrement(id) {
+          const idx = this.box.findIndex(it => it.id === id);
+          if (idx !== -1) this.box.splice(idx, 1);
+        },
+        removeSlot(index) { if (index >= 0 && index < this.box.length) this.box.splice(index, 1); },
+        clear(){ this.box = []; },
+
+        subtotal(){ return this.box.reduce((s, it) => s + it.price, 0); },
+        total(){ return this.subtotal() + this.boxFee; },
+        payload(){
+          const map = new Map();
+          this.box.forEach(it => map.set(it.id, (map.get(it.id) || 0) + 1));
+          return {
+            items: Array.from(map.entries()).map(([id, qty]) => ({ id, qty })),
+            fee: this.boxFee,
+            subtotal: this.subtotal(),
+            total: this.total()
+          };
+        }
+      };
+    }
+
+        // Add intersection observer for scroll animations
+        document.addEventListener('alpine:init', () => {
+            Alpine.directive('intersect', (el, { expression }, { evaluate }) => {
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            evaluate(expression);
+                        }
+                    });
+                });
+                observer.observe(el);
+            });
+        });
+    </script>
+
+  <!-- Page JS entry (loads inserts etc.; safe even if empty) -->
+  <script type="module" src="/js/pages/index/index.js"></script>
+</body>
+</html>
