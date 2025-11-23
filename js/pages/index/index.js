@@ -1,9 +1,9 @@
 // HOME PAGE ENTRY: loads nav/footer inserts, then runs homepage scripts.
 // Uses ES modules — include with: <script type="module" src="/js/pages/index/index.js"></script>
 
-import "./js/pageInserts/nav.js";
-import "./js/pageInserts/footer.js";
-import "./js/pageInserts/boxBuilder.js"; // <-- add this line
+import "../../pageInserts/nav.js";
+import "../../pageInserts/footer.js";
+import "../../components/boxBuilder.js"; // <-- add this line
 
 
 // Insert helper: fetch HTML, inject, then call the component's init
@@ -20,8 +20,8 @@ async function insertAndInit(targetId, url, initFn) {
 }
 
 // Mount inserts (call asap)
-insertAndInit("navInsert", "/pageInserts/nav.html", window.OSZ?.navInit);
-insertAndInit("footerInsert", "/pageInserts/footer.html", window.OSZ?.footerInit);
+insertAndInit("navInsert", "pageInserts/nav.html", window.OSZ?.navInit);
+insertAndInit("footerInsert", "pageInserts/footer.html", window.OSZ?.footerInit);
 
 // --------------------
 // HOMEPAGE ENHANCEMENTS
